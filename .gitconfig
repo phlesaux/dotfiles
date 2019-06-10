@@ -1,0 +1,33 @@
+[alias]
+        ci = commit
+        co = checkout
+        pfwl = push --force-with-lease
+        oops = commit --amend --no-edit
+        reword = commit --amend
+        uncommit = reset --soft HEAD~1
+        st = status
+[branch]
+        sort = -committerdate
+[color]
+        ui = auto
+[column]
+        ui = auto
+[core]
+        excludesfile = ~/.gitignore
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[init]
+        defaultBranch = main
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[tag]
+        sort = version:refname

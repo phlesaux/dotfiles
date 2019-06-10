@@ -1,0 +1,17 @@
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+[plugins.syntax-highlighting]
+github = 'zsh-users/zsh-syntax-highlighting'
+
+[plugins.completions]
+github = 'zsh-users/zsh-completions'
+
+[plugins.history-substring-search]
+github = 'zsh-users/zsh-history-substring-search'
+
