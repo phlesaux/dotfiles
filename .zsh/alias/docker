@@ -1,0 +1,25 @@
+# Info
+alias d='docker'
+alias di='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+
+# Control
+alias dstart='docker start'
+alias dstop='docker stop'
+alias drm='docker rm'
+alias drmi='docker rmi'
+
+# Compose
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dcb='docker compose build'
+alias dcl='docker compose logs'
+alias dcp='docker compose pull'
+alias dcr='docker compose restart'
+alias dce='docker compose exec'
+
+# Cleanup
+alias dprune='docker system prune -f'
+alias dvprune='docker volume prune -f'
+alias diprune='docker image prune -f'
