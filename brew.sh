@@ -14,17 +14,25 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Install basic brew dependencies.
-dependencies=(
+# Core tools
+core_dependencies=(
   git
   grep
   openssh
   sheldon
+  tree
   vim
   zsh
 )
 
-brew install "${dependencies[@]}"
+# Go tools
+go_dependencies=(
+  go
+  golangci-lint
+  gopls
+)
+
+brew install "${core_dependencies[@]}" "${go_dependencies[@]}"
 
 # Remove outdated versions from the cellar.
 brew cleanup
