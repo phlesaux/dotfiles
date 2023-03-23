@@ -20,7 +20,7 @@ brew install zsh
 brew install grep
 brew install openssh
 brew install php
-brew install php@8.1
+brew install composer
 brew install git
 
 # Install others tools for development.
