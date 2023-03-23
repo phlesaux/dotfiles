@@ -1,0 +1,13 @@
+# AWS
+alias loginaws="saml2aws login --force --cache-saml --skip-prompt"
+
+# Git
+alias ciretry="git commit --allow-empty -m 'chore(ci): retry'"
+
+# PHP
+alias sf="php bin/console"
+alias phpdebug="php -dxdebug.client_host=127.0.0.1 -dxdebug.mode=debug -dxdebug.client_port=9003 -dxdebug.start_with_request=yes"
+alias setphp82="export PATH="/usr/local/opt/php@8.2/bin:$PATH""
+alias setphp81="export PATH="/usr/local/opt/php@8.1/bin:$PATH""
+alias setphp80="export PATH="/usr/local/opt/php@8.0/bin:$PATH""
+alias setphp74="export PATH="/usr/local/opt/php@7.4/bin:$PATH""
