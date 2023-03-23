@@ -7,7 +7,8 @@ alias ciretry="git commit --allow-empty -m 'chore(ci): retry'"
 # PHP
 alias sf="php bin/console"
 alias phpdebug="php -dxdebug.client_host=127.0.0.1 -dxdebug.mode=debug -dxdebug.client_port=9003 -dxdebug.start_with_request=yes"
-alias setphp82="export PATH="/usr/local/opt/php@8.2/bin:$PATH""
-alias setphp81="export PATH="/usr/local/opt/php@8.1/bin:$PATH""
-alias setphp80="export PATH="/usr/local/opt/php@8.0/bin:$PATH""
-alias setphp74="export PATH="/usr/local/opt/php@7.4/bin:$PATH""
+
+alias setphp82='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@8.2 --force --overwrite; } &> /dev/null && php -v'
+alias setphp81='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.2; brew link php@8.1 --force --overwrite; } &> /dev/null && php -v'
+alias setphp80='{ brew unlink php@7.4; brew unlink php@8.1; brew unlink php@8.2; brew link php@8.0 --force --overwrite; } &> /dev/null && php -v'
+alias setphp74='{ brew unlink php@8.0; brew unlink php@8.1; brew unlink php@8.2; brew link php@7.4 --force --overwrite; } &> /dev/null && php -v'
