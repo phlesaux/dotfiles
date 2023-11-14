@@ -12,3 +12,7 @@ alias setphp82='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1;
 alias setphp81='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.2; brew link php@8.1 --force --overwrite; } &> /dev/null && php -v'
 alias setphp80='{ brew unlink php@7.4; brew unlink php@8.1; brew unlink php@8.2; brew link php@8.0 --force --overwrite; } &> /dev/null && php -v'
 alias setphp74='{ brew unlink php@8.0; brew unlink php@8.1; brew unlink php@8.2; brew link php@7.4 --force --overwrite; } &> /dev/null && php -v'
+
+# XDEBUG
+alias activate-xdbg="sed -i.default \"s/^;zend_extension=/zend_extension=/\" /opt/homebrew/etc/php/8.1/conf.d/ext-xdebug.ini"
+alias disable-xdbg="sed -i.default \"s/^zend_extension=/;zend_extension=/\" /opt/homebrew/etc/php/8.1/conf.d/ext-xdebug.ini"
