@@ -12,10 +12,17 @@ for file in ~/.zsh/export/*; do
   fi
 done
 
-## aws cli completion
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/usr/local/bin/aws_completer' awsw
+# COMPLETIONS
+if [[ -d "/opt/homebrew/share/zsh/site-functions" ]]; then
+  fpath=("/opt/homebrew/share/zsh/site-functions" $fpath)
+fi
+
+autoload -Uz compinit
+if [[ ! -f "$HOME/.zcompdump" || "$HOME/.zcompdump" -ot "$HOME/.zshrc" ]]; then
+  compinit -d "$HOME/.zcompdump"
+else
+  compinit -C -d "$HOME/.zcompdump"
+fi
 
 # PROMPT
 autoload -Uz vcs_info
